@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_ticket/internal/utils/style.dart';
 
 class AppButton extends StatelessWidget {
   final double? height;
@@ -28,7 +29,7 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: ontap,
-      borderRadius: BorderRadius.circular(radius ?? 10),
+      borderRadius: BorderRadius.circular(radius ?? 20),
       child: Container(
         width: width ?? 150,
         height: height ?? 50,
@@ -38,11 +39,11 @@ class AppButton extends StatelessWidget {
             border: Border.all(
               color: borderColor ?? Colors.black.withOpacity(0.4),
             ),
-            borderRadius: BorderRadius.circular(radius ?? 10)),
+            borderRadius: BorderRadius.circular(radius ?? 20)),
         child: Center(
           child: Text(
             text ?? "button",
-            style: textStyle,
+            style: textStyle ?? AppTextStyle.textButton,
           ),
         ),
       ),
