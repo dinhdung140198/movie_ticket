@@ -45,6 +45,8 @@ class AppColors {
   static const Color blueBA1 = Color(0xFF2C4BA1);
   static const Color blue577 = Color(0xFF1E3577);
   static const Color greyDBD = Color(0xFFABADBD);
+  static const Color greyDAD = Color(0xFFABADAD);
   static const Color grey76A = Color(0xFF42476A);
   static const Color greyD3B = Color(0xFF151D3B);
+  static Color unselectButtonColor = const Color(0xFF537DEC).withOpacity(0.1);
 }

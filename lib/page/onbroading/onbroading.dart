@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie_ticket/internal/utils/app_assets.dart';
 import 'package:movie_ticket/internal/utils/style.dart';
-import 'package:movie_ticket/page/widgets/app_botton.dart';
+import 'package:movie_ticket/page/common_widgets/app_botton.dart';
+import 'package:movie_ticket/page/common_widgets/app_logo.dart';
 
 class OnbroadingScreen extends StatelessWidget {
   const OnbroadingScreen({super.key});
@@ -18,21 +18,11 @@ class OnbroadingScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                const LogoApp(
                   width: 144,
                   height: 144,
-                  decoration: BoxDecoration(
-                      color: AppColors.mainColor,
-                      borderRadius: BorderRadius.circular(32.0)),
-                  child: Image.asset(
-                    AppIcons.splashIcon,
-                    // fit: BoxFit.fill,
-                    width: 55.48,
-                    height: 55.48,
-                  ),
-                ),
-                const SizedBox(
-                  height: 54,
+                  widthIcon: 66.58,
+                  heightIcon: 66.58,
                 ),
                 Text(
                   "New Experience",
