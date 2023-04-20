@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movie_ticket/page/auth/login/login_screen.dart';
+import 'package:movie_ticket/page/auth/register/register_screen.dart';
 import 'package:movie_ticket/page/splash/splash.dart';
+import 'package:movie_ticket/page/user_profile/user_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      home: const UserProfileScreen(),
     );
   }
 }
