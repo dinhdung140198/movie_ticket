@@ -38,6 +38,7 @@ class AppColors {
   static const Color backgroundColor = Color(0xFF0B0F2F);
   static const Color mainColor = Color(0xFF3E60F9);
   static const Color titleColor = Color(0xFFFFFFFF);
+  static const Color errorColor = Color(0xFFFF5353);
   static const Color blueEFF = Color(0xFF449EFF);
   static const Color blue7F7 = Color(0xFF1DC7F7);
   static const Color blueAE7 = Color(0xFF48CAE7);
@@ -48,5 +49,5 @@ class AppColors {
   static const Color greyDAD = Color(0xFFABADAD);
   static const Color grey76A = Color(0xFF42476A);
   static const Color greyD3B = Color(0xFF151D3B);
-  static Color unselectButtonColor = const Color(0xFF537DEC).withOpacity(0.1);
+  static Color unselectButtonColor = const Color.fromARGB(10,72, 202, 231);
 }

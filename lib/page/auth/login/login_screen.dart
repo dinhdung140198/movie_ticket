@@ -9,6 +9,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final formKey = GlobalKey<FormState>();
+    final emailController = TextEditingController();
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       body: Padding(
@@ -23,36 +25,67 @@ class LoginScreen extends StatelessWidget {
               widthIcon: 40.69,
               heightIcon: 40.69,
             ),
-            const SizedBox(height: 32,),
+            const SizedBox(
+              height: 32,
+            ),
             Text(
               "Welcome Back,\nMovie Lover!",
               style: AppTextStyle.titleText,
             ),
-            const SizedBox(height: 30,),
-            const InputFieldApp(),
-            const SizedBox(height: 12,),
-            Row(
-              children: [
-                const Expanded(child: SizedBox()),
-                InkWell(
-                  child: Text(
-                    "Forget Password?",
-                    style: AppTextStyle.content.copyWith(fontSize: 12),
-                  ),
-                ),
-              ],
+            const SizedBox(
+              height: 30,
             ),
-            const SizedBox(height: 28,),
-            Center(
-              child: AppButton(
-                text: "Login",
-                colorButton: AppColors.unselectButtonColor,
-                width: 255,
-                height: 60,
-                ontap: () {},
+            Form(
+              key: formKey,
+              child: Column(
+                children: [
+                  InputFieldApp(
+                    labelText: "Email Address",
+                    hintText: "Input your email address",
+                    controller: emailController,
+                    validator: (value){
+                      if (value!.isEmpty) {
+                        return '\u26A0 Field is empty.';
+                      }
+                      return null;
+                    },
+                  ),
+                  const SizedBox(
+                    height: 44,
+                  ),
+                  const InputFieldApp(),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  Row(
+                    children: [
+                      const Expanded(child: SizedBox()),
+                      InkWell(
+                        child: Text(
+                          "Forget Password?",
+                          style: AppTextStyle.content.copyWith(fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 28,
+                  ),
+                  Center(
+                    child: AppButton(
+                      text: "Login",
+                      colorButton: AppColors.unselectButtonColor,
+                      width: 255,
+                      height: 60,
+                      ontap: () {},
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 21,),
+            const SizedBox(
+              height: 21,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
